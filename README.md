@@ -8,7 +8,5 @@ Depending on the time of day (am/pm), the color theme changes.
 ## Initiate run
 Open the file index.html in your browser
 
-
-
-
+---
 Thanks for the design :heart: [Ajinkya](https://www.figma.com/@9a0e4f62_0eda_4)
