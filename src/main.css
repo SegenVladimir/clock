@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+:root{
+    --color-white: #ffffff;
+    --color-white-blur: #EAECF3;
+    --color-grey: #9E9FA6;
+    --color-grey-alt: #605E65;
+    --color-black: #000000;
+    --color-purpur: #3F3DB6;
+}
+
+*:not(svg *) {
+    all: unset;
+    display: revert;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-white-blur);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--color-black);
+    overflow: hidden;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 92px;
+}
+
+.clock{
+    position: relative;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: var(--color-white-blur);
+    border: 1px solid rgba(63, 63, 63, 0.1);
+    box-shadow: 8px 8px 20px rgba(170, 170, 170, 0.25), -6px -7px 20px rgba(255, 255, 255, 0.5), inset -6px -1px 10px 2px rgba(255, 255, 255, 0.5), inset 5px 7px 10px -1px rgba(166, 166, 166, 0.25);
+}
+
+.clock__face{
+    position: relative;
+    height: 356px;
+    margin: 32px 45px;
+}
+.clock__face span{
+    display: none;
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: var(--color-grey);
+    margin: auto;
+}
+.clock__face span:nth-child(1){
+    display: block;
+    top: 20px;
+    left: 0;
+    right: 0;
+    transform: rotate(90deg);
+}
+.clock__face span:nth-child(2){
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+.clock__face span:nth-child(3){
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: rotate(90deg);
+}
+.clock__face span:nth-child(4){
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.clock__circle{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    background: var(--color-purpur);
+    border: 4px solid var(--color-white);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.clock__arrows {
+    position: absolute;
+    top: -1.5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.clock__arrows .hours{
+    display: block;
+    position: absolute;
+    left: -93px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 93px;
+    height: 5px;
+    background-color:  var(--color-black);
+    border-radius: 50px;
+}
+.clock__arrows .minutes{
+    display: block;
+    position: absolute;
+    left: -1.5px;
+    right: 0;
+    top: -127px;
+    bottom: 0;
+    margin: auto;
+    width: 127px;
+    height: 5px;
+    background-color:  var(--color-black);
+    border-radius: 50px;
+    transform: rotate(90deg);
+}
+.clock__arrows .seconds{
+    display: block;
+    position: absolute;
+    left: 60px;
+    right: 0;
+    top: 0;
+    bottom: -55px;
+    margin: auto;
+    width: 173px;
+    height: 2px;
+    background-color:  var(--color-purpur);
+    border-radius: 50px;
+    transform: rotate(41.25deg);
+    z-index: 2;
+}
+
+.information{
+    margin-top: 46px;
+}
+.information__time{
+    position: relative;
+    display: flex;
+}
+.information__time__num{
+    font-size: 100px;
+    line-height: 150px;
+}
+.information__time__meridiem{
+    position: absolute;
+    right: -50px;
+    font-size: 30px;
+    line-height: 45px;
+}
+
+.information__date{
+    margin-top: 46px;
+    color: var(--color-grey-alt);
+    text-align: center;
+}
