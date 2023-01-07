@@ -20,7 +20,7 @@ setInterval(() => {
     mn.style.transform = `rotateZ(${mm}deg)`;
     sc.style.transform = `rotateZ(${ss}deg)`;
 
-    time.innerHTML = `${day.getHours()}:${day.getMinutes()}`;
+    time.innerHTML = `${day.getHours()}:${day.getMinutes() < 10 ? '0'+day.getMinutes() : day.getMinutes()}`;
     timeMeridiem.innerText = meridiem;
     body.setAttribute('scheme', meridiem === 'pm' ? 'dark' : 'light');
 
