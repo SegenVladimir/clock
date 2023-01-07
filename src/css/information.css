@@ -1,0 +1,23 @@
+.information{
+    margin-top: 46px;
+}
+.information__time{
+    position: relative;
+    display: flex;
+}
+.information__time__num{
+    font-size: 100px;
+    line-height: 150px;
+}
+.information__time__meridiem{
+    position: absolute;
+    right: -50px;
+    font-size: 30px;
+    line-height: 45px;
+    text-transform: uppercase;
+}
+.information__date{
+    margin-top: 46px;
+    color: var(--color-grey-alt);
+    text-align: center;
+}

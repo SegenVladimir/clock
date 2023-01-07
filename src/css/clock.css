@@ -1,0 +1,114 @@
+.clock{
+    position: relative;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: var(--color-white-blur);
+    border: 1px solid rgba(63, 63, 63, 0.1);
+    box-shadow: var(--main-shadow);
+}
+
+.clock__face{
+    position: relative;
+    height: 356px;
+    margin: 32px 45px;
+}
+.clock__face:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    background: var(--color-purpur);
+    border: 4px solid var(--color-white);
+    border-radius: 50%;
+    z-index: 2;
+}
+.clock__face span{
+    display: none;
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: var(--color-grey);
+    margin: auto;
+}
+.clock__face span:nth-child(1){
+    display: block;
+    top: 20px;
+    left: 0;
+    right: 0;
+    transform: rotate(90deg);
+}
+.clock__face span:nth-child(2){
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+.clock__face span:nth-child(3){
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: rotate(90deg);
+}
+.clock__face span:nth-child(4){
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.clock__arrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+.clock__arrow{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 205px;
+    height: 205px;
+    transition: 1s linear;
+}
+.clock__arrow.hours:before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 93px;
+    background-color: var(--color-black);
+    border-radius: 6px 6px 0 0;
+}
+.clock__arrow.minutes{
+    width: 280px;
+    height: 280px;
+}
+.clock__arrow.minutes:before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 127px;
+    background-color: var(--color-black);
+    border-radius: 6px 6px 0 0;
+}
+.clock__arrow.seconds{
+    width: 300px;
+    height: 300px;
+}
+.clock__arrow.seconds:before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 173px;
+    background-color: var(--color-purpur);
+    z-index: 2;
+}
