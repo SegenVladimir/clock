@@ -16,11 +16,15 @@ setInterval(() => {
     const ss = day.getSeconds() * deg;
     const meridiem = day.getHours() >= 12 ? 'pm' : 'am';
 
+    let hours = day.getHours() % 12;
+    hours = hours ? hours : 12;
+    hours = hours < 10 ? '0'+hours : 12;
+
     hr.style.transform = `rotateZ(${(hh) + (mm/12)}deg)`;
     mn.style.transform = `rotateZ(${mm}deg)`;
     sc.style.transform = `rotateZ(${ss}deg)`;
 
-    time.innerHTML = `${day.getHours()}:${day.getMinutes() < 10 ? '0'+day.getMinutes() : day.getMinutes()}`;
+    time.innerHTML = `${hours}:${day.getMinutes() < 10 ? '0'+day.getMinutes() : day.getMinutes()}`;
     timeMeridiem.innerText = meridiem;
     body.setAttribute('scheme', meridiem === 'pm' ? 'dark' : 'light');
 
